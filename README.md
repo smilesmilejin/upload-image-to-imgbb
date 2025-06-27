@@ -37,6 +37,26 @@ It's also a good idea to add the semicolon eslint rule to the .eslintrc.cjs file
   },
 
 ```
+
+To avoid noise when running ```$npm run lint```, 
+In the old version, we should also add 'vite.config.js' to the list of files under the ignorePatterns key, which should look like this:
+```
+ignorePatterns: ['dist', '.eslintrc.cjs', 'vite.config.js'],
+```
+
+
+In new Version:
+```
+  {
+    ignores: ['dist', '.eslintrc.cjs', 'vite.config.js'],
+  },
+```
+
+Add the following line to the end of the ```.gitignore``` file:
+```
+.env
+```
+
 In our project root, we'll install our dependencies and then start a server with the following two commands in the terminal:
 ```
 $ npm install
