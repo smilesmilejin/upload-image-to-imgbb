@@ -25,3 +25,23 @@ Run this command to create this practice project.
 ```
 npm create -y vite@latest recreate-github -- --template react
 ```
+
+It's also a good idea to add the semicolon eslint rule to the .eslintrc.cjs file. The resulting rules section should look like this:
+```
+  rules: {
+    'react-refresh/only-export-components': [
+      'warn',
+      { allowConstantExport: true },
+    ],
+    'semi': [ 'warn', 'always'],
+  },
+
+```
+In our project root, we'll install our dependencies and then start a server with the following two commands in the terminal:
+```
+$ npm install
+```
+After running npm install, we'll see a new directory at the root level called node_modules with the installed dependencies. Now we're ready to start the server by running the following command in the terminal:
+```
+$ npm run dev
+```
